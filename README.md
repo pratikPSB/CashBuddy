@@ -35,13 +35,9 @@ The functional specification is based on the provided **Android Practical: Cash 
 ---
 
 ## **Demo Screens**
-
-| Screen         | Image                                   |
-|----------------|-----------------------------------------|
-| Credit Screen  | ![Credit Screen](app-demo/credit.jpg)   |
-| History Screen | ![History Screen](app-demo/history.jpg) |
-| Summary Screen | ![Summary Screen](app-demo/summary.jpg) |
-| Debit Screen   | ![Debit Screen](app-demo/debit.jpg)     |
+| Credit Screen                                                   | Debit Screen                                                   | Summary Screen                                                   | History Screen                                                   |
+|-----------------------------------------------------------------|----------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
+| <picture><img src="app-demo/credit.jpg" width="220"/></picture> | <picture><img src="app-demo/debit.jpg" width="220"/></picture> | <picture><img src="app-demo/summary.jpg" width="220"/></picture> | <picture><img src="app-demo/history.jpg" width="220"/></picture> |
 
 ---
 
