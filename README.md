@@ -30,7 +30,7 @@ The functional specification is based on the provided **Android Practical: Cash 
 
 ## **Running App Demo**
 
-![App Demo](app-demo/app-demo.mp4)
+![App Demo](app-demo/app-demo.gif)
 
 ---
 
