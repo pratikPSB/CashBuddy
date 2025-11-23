@@ -1,0 +1,13 @@
+buildscript {
+    val objectBoxVersion by extra("5.0.1")
+
+    dependencies {
+        classpath("io.objectbox:objectbox-gradle-plugin:$objectBoxVersion")
+    }
+}
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+}

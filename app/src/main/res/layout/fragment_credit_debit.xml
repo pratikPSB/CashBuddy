@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.creditDebit.CreditDebitFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.creditDebit.CreditDebitFragment">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:checkedButton="@+id/btnCredit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/btnCredit"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit" />
+
+            <Button
+                android:id="@+id/btnDebit"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Debit" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- Credit Layout -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/creditGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="currency_500,et_500,currency_200,et_200,currency_100,et_100,currency_50,et_50,currency_20,et_20,currency_10,et_10,btnSubmitCredit" />
+
+        <!-- Debit Layout -->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/debitGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="et_amount,btnSubmitDebit" />
+
+
+        <!-- Credit UI Components -->
+        <TextView
+            android:id="@+id/currency_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="500 x"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_500"
+            app:layout_constraintEnd_toStartOf="@+id/et_500"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_500" />
+
+        <EditText
+            android:id="@+id/et_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Count"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/currency_500"
+            app:layout_constraintTop_toBottomOf="@id/toggleButton" />
+
+        <TextView
+            android:id="@+id/currency_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="200 x"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_200"
+            app:layout_constraintEnd_toStartOf="@+id/et_200"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_200" />
+
+        <EditText
+            android:id="@+id/et_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Count"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/currency_200"
+            app:layout_constraintTop_toBottomOf="@id/et_500" />
+
+        <TextView
+            android:id="@+id/currency_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="100x"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_100"
+            app:layout_constraintEnd_toStartOf="@+id/et_100"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_100" />
+
+        <EditText
+            android:id="@+id/et_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Count"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/currency_100"
+            app:layout_constraintTop_toBottomOf="@id/et_200" />
+
+        <TextView
+            android:id="@+id/currency_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="50 x"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_50"
+            app:layout_constraintEnd_toStartOf="@+id/et_50"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_50" />
+
+        <EditText
+            android:id="@+id/et_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Count"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/currency_50"
+            app:layout_constraintTop_toBottomOf="@id/et_100" />
+
+        <TextView
+            android:id="@+id/currency_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="20 x"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_20"
+            app:layout_constraintEnd_toStartOf="@+id/et_20"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_20" />
+
+        <EditText
+            android:id="@+id/et_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Count"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/currency_20"
+            app:layout_constraintTop_toBottomOf="@id/et_50" />
+
+        <TextView
+            android:id="@+id/currency_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="10 x"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_10"
+            app:layout_constraintEnd_toStartOf="@+id/et_10"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_10" />
+
+        <EditText
+            android:id="@+id/et_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Count"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/currency_10"
+            app:layout_constraintTop_toBottomOf="@id/et_20" />
+
+        <Button
+            android:id="@+id/btnSubmitCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_10" />
+
+        <!-- Debit UI Components -->
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Enter Amount"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toggleButton" />
+
+        <Button
+            android:id="@+id/btnSubmitDebit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

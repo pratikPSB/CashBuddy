@@ -1,0 +1,105 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:8368671250772213034",
+      "lastPropertyId": "4:8430626187134115994",
+      "name": "TransactionHistory",
+      "properties": [
+        {
+          "id": "1:1869038134022199940",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1083473785115626649",
+          "name": "amount",
+          "type": 8
+        },
+        {
+          "id": "3:3823248429272487518",
+          "name": "type",
+          "type": 5
+        },
+        {
+          "id": "4:8430626187134115994",
+          "name": "date",
+          "type": 12
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:6413521446128503042",
+      "lastPropertyId": "3:4018730739720630446",
+      "name": "Denomination",
+      "properties": [
+        {
+          "id": "1:530396118690410299",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:360635136289898916",
+          "name": "type",
+          "type": 5
+        },
+        {
+          "id": "3:4018730739720630446",
+          "name": "count",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:2796202512794590359",
+      "lastPropertyId": "4:3962494963329175487",
+      "name": "TransactionDenomination",
+      "properties": [
+        {
+          "id": "1:9138840062538507213",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:9223328089657043405",
+          "name": "type",
+          "type": 5
+        },
+        {
+          "id": "3:7638573662811531327",
+          "name": "count",
+          "type": 5
+        },
+        {
+          "id": "4:3962494963329175487",
+          "name": "transactionId",
+          "indexId": "1:3796529043262482020",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "TransactionHistory"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:2796202512794590359",
+  "lastIndexId": "1:3796529043262482020",
+  "lastRelationId": "1:2859318852708955127",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [
+    2859318852708955127
+  ],
+  "version": 1
+}
